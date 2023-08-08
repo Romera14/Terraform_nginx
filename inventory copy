@@ -1,0 +1,10 @@
+[platform-vm]
+web-1   ansible_host=84.201.157.155
+web-2   ansible_host=84.201.175.98
+
+[test_for]
+main   ansible_host=51.250.85.250
+replica   ansible_host=51.250.79.199
+
+[disk_test-vm]
+test-disk   ansible_host=51.250.4.110 

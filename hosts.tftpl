@@ -1,0 +1,16 @@
+[platform-vm]
+%{~ for i in platform-vm ~}
+
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]} 
+%{~ endfor ~}
+
+
+[test_for]
+%{~ for i in test_for-vm ~}
+
+${i["name"]}   ansible_host=${i["network_interface"][0]["nat_ip_address"]} 
+%{~ endfor ~}
+
+
+[disk_test-vm]
+${disk_test-vm["name"]}   ansible_host=${disk_test-vm["network_interface"][0]["nat_ip_address"]} 
