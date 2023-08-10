@@ -14,5 +14,5 @@ output "yandex_compute_instance_platform_name" {
 
 output "yandex_compute_instance_test_for" {
   depends_on = [ yandex_compute_instance.test_for ]
-  value = [for i in var.vm_test : i.vm_name]
+  value = [for i in var.vm_test : yandex_compute_instance.test_for[i.vm_name].name]
 }
