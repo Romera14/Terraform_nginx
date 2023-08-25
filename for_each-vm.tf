@@ -23,7 +23,7 @@ resource "yandex_compute_instance" "test_for" {
     nat       = true
   }
   metadata = {
-    user-data = "${file("/home/paromov/ter-homeworks/03/src/meta.txt")}"
+    user-data = "${file("./cloud-init.yml")}"
   }
 }
 /* ВТОРОЙ ВАРИАНТ
