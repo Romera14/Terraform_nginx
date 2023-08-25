@@ -31,6 +31,6 @@ resource "yandex_compute_instance" "disk_test" {
     nat       = true
   }
   metadata = {
-    user-data = "${file("./meta.cloud-init.yml")}"
+    user-data = "${file("./cloud-init.yml")}"
   }
 }
