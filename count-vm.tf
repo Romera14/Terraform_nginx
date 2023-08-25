@@ -24,7 +24,7 @@ resource "yandex_compute_instance" "platform" {
     nat       = true
   }
   metadata = {
-    user-data = "${file("./meta.cloud-init.yml")}"
+    user-data = "${file("./cloud-init.yml")}"
   }
 }
 
